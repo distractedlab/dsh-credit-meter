@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Credit meter",
+    "description": "Shows the remaining DeepSeek account credit in the reading row under the composer: a wallet glyph, the word Available, and the spendable amount (recharge plus bonus of the best-funded currency; a second funded currency is appended as +$5.00). Hover it for the per-currency recharge and bonus wallets. It re-reads when a turn settles, once a minute while the window is visible, and when the window regains focus, so the amount follows what the session spends. Nothing is shown while signed out or before the first read; a failed read keeps the last value and marks it stale. The reading is account-wide, so switching sessions does not change it; a blank home screen has no reading row and shows nothing. Turning the plugin off removes the reading and its balance queries.",
+    "detail": "docs/DETAIL.md"
+  }
+}

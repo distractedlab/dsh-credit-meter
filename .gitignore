@@ -1,0 +1,25 @@
+# Dependencies and generated files: the plugin has none, but a linked profile
+# install may create these beside the sources.
+node_modules/
+pnpm-lock.yaml
+
+# Package manager and environment files may carry credentials or tokens.
+.npmrc
+.env
+.env.*
+
+# Build output and packed tarballs.
+dist/
+*.tgz
+
+# Logs and diagnostics.
+*.log
+npm-debug.log*
+
+# Editor and operating-system noise.
+.DS_Store
+Thumbs.db
+
+# Scratch space that must never be part of the repository.
+.dsh-tmp/
+_scratch/
