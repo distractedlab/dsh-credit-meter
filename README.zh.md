@@ -55,16 +55,16 @@ DeepSeek 平台把一次请求记进余额需要时间，所以刚结束的一�
 
 ## 安装
 
-从本地目录安装（当前这个包的状态）：
+从 npm 安装：
+
+1. **Plugins → Add plugin**，输入 `dsh-credit-meter@1.0.1`。
+
+从本地目录安装（开发插件时用）：
 
 1. 把这个目录留在原处；DSH 是链接它，而不是复制。
 2. 在 DSH 里打开 **Plugins（插件）→ Add plugin（添加插件）**，选择这个目录。
    用 Agent 的等价做法是 `plugin_manager` 的 `install_bundle`，参数为绝对路径。
 3. 如果页面本来开着，先刷新一次，然后发一条消息。
-
-从 npm 安装：
-
-1. **Plugins → Add plugin**，输入 `dsh-credit-meter@1.0.1`。
 
 ## 隐私
 

@@ -64,16 +64,16 @@ The tooltip lists funded wallets only, so a bonus-only account reads
 
 ## Install
 
-From a local directory (the current state of this package):
+From npm:
+
+1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.1`.
+
+From a local checkout (when developing the plugin):
 
 1. Keep this directory where it is; DSH links it instead of copying it.
 2. In DSH, open **Plugins → Add plugin** and choose this directory. The agent
    equivalent is `plugin_manager` with `install_bundle` and the absolute path.
 3. Refresh the page once if it was already open, then send a message.
-
-From npm:
-
-1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.1`.
 
 ## Privacy
 
