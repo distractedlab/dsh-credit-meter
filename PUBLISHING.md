@@ -6,9 +6,9 @@ URL are filled in.
 
 ## Before the first release
 
-1. Set the publisher identity. `package.json` `author` and the `LICENSE`
-   copyright line currently read `dsh-credit-meter contributors`; replace them
-   with the organisation or person that owns the release.
+1. The publisher identity is `distractedlab`: `package.json` `author` and the
+   `LICENSE` copyright line both name it. Update the two together if the
+   project ever moves to another owner.
 2. Keep the `repository`, `homepage`, and `bugs` fields pointing at the GitHub
    repository; npm links the package page from them.
 3. Keep README images on absolute URLs (the `raw.githubusercontent.com`
