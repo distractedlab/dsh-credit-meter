@@ -2,12 +2,12 @@
 
 [English](README.md) | 中文
 
-![Credit meter 图标](icon.svg)
+![Credit meter 图标](https://raw.githubusercontent.com/distractedlab/dsh-credit-meter/main/icon.svg)
 
 一个 DeepSeek Harness 插件：把 DeepSeek 账户剩余额度显示在输入框下方那行读数里。
 那一行原本就有活动统计、token 用量和上下文占用。
 
-![额度读数录屏](docs/preview.gif)
+![额度读数录屏](https://raw.githubusercontent.com/distractedlab/dsh-credit-meter/main/docs/preview.gif)
 
 ## 显示什么
 
@@ -62,9 +62,9 @@ DeepSeek 平台把一次请求记进余额需要时间，所以刚结束的一�
    用 Agent 的等价做法是 `plugin_manager` 的 `install_bundle`，参数为绝对路径。
 3. 如果页面本来开着，先刷新一次，然后发一条消息。
 
-从 npm 安装（需要这个包已经发布，见 [PUBLISHING.md](PUBLISHING.md)）：
+从 npm 安装：
 
-1. **Plugins → Add plugin**，输入 `dsh-credit-meter@1.0.0`。
+1. **Plugins → Add plugin**，输入 `dsh-credit-meter@1.0.1`。
 
 ## 隐私
 

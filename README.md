@@ -2,13 +2,13 @@
 
 English | [Chinese](README.zh.md)
 
-![Credit meter icon](icon.svg)
+![Credit meter icon](https://raw.githubusercontent.com/distractedlab/dsh-credit-meter/main/icon.svg)
 
 A DeepSeek Harness plugin that shows the remaining DeepSeek account credit as
 one more reading in the composer dock — the row under the message input that
 already carries activity, token usage, and the context meter.
 
-![Recording of the credit reading in the composer dock](docs/preview.gif)
+![Recording of the credit reading in the composer dock](https://raw.githubusercontent.com/distractedlab/dsh-credit-meter/main/docs/preview.gif)
 
 ## What it shows
 
@@ -71,9 +71,9 @@ From a local directory (the current state of this package):
    equivalent is `plugin_manager` with `install_bundle` and the absolute path.
 3. Refresh the page once if it was already open, then send a message.
 
-From npm (only after this package is published; see [PUBLISHING.md](PUBLISHING.md)):
+From npm:
 
-1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.0`.
+1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.1`.
 
 ## Privacy
 

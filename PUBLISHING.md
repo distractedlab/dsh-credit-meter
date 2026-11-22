@@ -9,18 +9,15 @@ URL are filled in.
 1. Set the publisher identity. `package.json` `author` and the `LICENSE`
    copyright line currently read `dsh-credit-meter contributors`; replace them
    with the organisation or person that owns the release.
-2. Add `repository`, `homepage`, and `bugs` to `package.json` once the GitHub
-   repository exists:
-
-   ```json
-   "repository": { "type": "git", "url": "git+https://github.com/ORG/dsh-credit-meter.git" },
-   "homepage": "https://github.com/ORG/dsh-credit-meter#readme",
-   "bugs": { "url": "https://github.com/ORG/dsh-credit-meter/issues" }
-   ```
-
-3. Check that `cordis.patch.yml` names the same package as `package.json`
+2. Keep the `repository`, `homepage`, and `bugs` fields pointing at the GitHub
+   repository; npm links the package page from them.
+3. Keep README images on absolute URLs (the `raw.githubusercontent.com`
+   addresses already there). npm renders the README from the published tarball
+   with no repository context, so a relative path resolves to a 404 there even
+   though GitHub shows it.
+4. Check that `cordis.patch.yml` names the same package as `package.json`
    (`dsh-credit-meter`). A mismatch installs but never loads.
-4. Choose the push identity (see below) and re-check the name on npm:
+5. Choose the push identity (see below) and re-check the name on npm:
    `npm view dsh-credit-meter version` should still report 404.
 
 Publishing under a scoped name instead (`@scope/dsh-credit-meter`) needs the
