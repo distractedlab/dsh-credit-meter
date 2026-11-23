@@ -6,7 +6,7 @@ URL are filled in.
 
 ## Before the first release
 
-1. The publisher identity is `distractedlab`: `package.json` `author` and the
+1. The project attribution is `DistractedLab`: `package.json` `author` and the
    `LICENSE` copyright line both name it. Update the two together if the
    project ever moves to another owner.
 2. Keep the `repository`, `homepage`, and `bugs` fields pointing at the GitHub

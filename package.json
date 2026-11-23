@@ -1,9 +1,9 @@
 {
   "name": "dsh-credit-meter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Remaining DeepSeek account credit as a composer-dock reading",
   "license": "MIT",
-  "author": "distractedlab (https://github.com/distractedlab)",
+  "author": "DistractedLab (https://github.com/distractedlab)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/distractedlab/dsh-credit-meter.git"

@@ -2,8 +2,6 @@
 
 English | [Chinese](README.zh.md)
 
-![Credit meter icon](https://raw.githubusercontent.com/distractedlab/dsh-credit-meter/main/icon.svg)
-
 A DeepSeek Harness plugin that shows the remaining DeepSeek account credit as
 one more reading in the composer dock — the row under the message input that
 already carries activity, token usage, and the context meter.
@@ -12,16 +10,20 @@ already carries activity, token usage, and the context meter.
 
 ## What it shows
 
-`Available ¥1.91` next to a small wallet glyph. Hovering the reading, or
-reading it with a screen reader, lists the wallets behind that number:
+`Balance ¥1.91` next to a small wallet glyph; when both currencies hold money
+it reads `Balance ¥1.91 · $5.00`. Hovering the reading, or reading it with a
+screen reader, repeats the amount under its full label and lists the balances
+behind it:
 
 ```
-Account credit
-Available ¥1.91
-Recharge ¥1.91
+Available Balance ¥1.91 · $5.00
+Top-up Balance ¥1.91
+Top-up Balance $5.00
 ```
 
 The labels are localized, so the reading follows the language of the UI.
+The compact tooltip uses white text on a dark background. It opens above the
+reading when space permits, otherwise below it.
 
 ## Where it appears
 
@@ -44,17 +46,24 @@ about a minute.
 
 ## What the number means
 
-Platform reports one wallet per currency and keeps recharge and bonus separate.
-The reading is the spendable total of the best-funded currency:
+Platform reports one wallet per currency and keeps top-up and bonus balances
+separate. The reading adds the top-up and bonus balances of the same currency,
+then lists each funded currency on its own — CNY first, then USD — with no
+currency conversion and no cross-currency sum:
 
-- recharge plus bonus of that currency;
-- a zero wallet in another currency never wins over a funded one;
-- every other funded currency is appended, for example `Available ¥1.91 +$5.00`;
-- formatting follows the Platform Web client: two decimals rounded down, and
-  `<¥0.01` below one cent.
+- `Balance ¥1.91` when one currency holds money;
+- `Balance ¥1.91 · $5.00` when both do;
+- `<¥0.01` / `<$0.01` for a funded amount below one cent; a negative sub-cent
+  amount reads `-<¥0.01`;
+- one zero reading when every returned wallet is zero, or when a successful
+  read returns no wallet: `Balance ¥0.00` when CNY was returned (or none),
+  `Balance $0.00` when only USD was.
 
-The tooltip lists funded wallets only, so a bonus-only account reads
-`Bonus ¥2.00` there.
+Amounts are truncated to two decimals in the same way the Platform Web client
+shows them, with grouped digits. The tooltip shows the same amount under its
+full label (`Available Balance`) and then lists each non-zero top-up and bonus
+balance in the same CNY-then-USD order, so a bonus-only account reads
+`Bonus Balance ¥2.00` there.
 
 ## Requirements
 
@@ -66,7 +75,7 @@ The tooltip lists funded wallets only, so a bonus-only account reads
 
 From npm:
 
-1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.1`.
+1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.3`.
 
 From a local checkout (when developing the plugin):
 
@@ -115,9 +124,8 @@ React from the shell's module table.
 └── LICENSE             MIT
 ```
 
-Edit `client.js`, check it with `node --check client.js`, and refresh the page.
-DSH does not hot-replace the code of a package that is already running, so a
-reload is required for a change to take effect.
+After editing `client.js`, check it with `node --check client.js`. If the change
+does not appear in DSH, reload the page.
 
 ## License
 
