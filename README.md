@@ -75,7 +75,7 @@ balance in the same CNY-then-USD order, so a bonus-only account reads
 
 From npm:
 
-1. **Plugins → Add plugin**, then enter `dsh-credit-meter@1.0.3`.
+1. **Plugins → Add plugin**, then enter `dsh-credit-meter` to install the latest release.
 
 From a local checkout (when developing the plugin):
 

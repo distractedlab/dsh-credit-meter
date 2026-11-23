@@ -61,7 +61,7 @@ DeepSeek 平台把一次请求记进余额需要时间，所以刚结束的一�
 
 从 npm 安装：
 
-1. **Plugins → Add plugin**，输入 `dsh-credit-meter@1.0.3`。
+1. **Plugins → Add plugin**，输入 `dsh-credit-meter` 安装最新发布版本。
 
 从本地目录安装（开发插件时用）：
 
